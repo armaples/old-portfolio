@@ -1,0 +1,86 @@
+
+* {
+    font-family: basic-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+
+}
+
+header {
+
+}
+
+header h1 {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+nav {
+
+}
+
+nav ul {
+
+}
+
+nav li {
+
+}
+
+nav a {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+
+}
+
+main section {
+
+}
+
+main aside {
+
+}
+
+main h2 {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.boxes {
+
+}
+
+.box {
+
+}
+
+.contactLinks {
+
+}
+
+footer {
+
+}
+
+footer h3 {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
