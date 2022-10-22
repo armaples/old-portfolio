@@ -14,9 +14,20 @@
     color: var(--periwinkle);
 }
 
+::selection {
+    color: var(--pink);
+    background: var(--periwinkle);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+
 html {
     background-image: linear-gradient(var(--purple), var(--periwinkle), var(--blue));
     background-size: cover;
+    scrollbar-width: none;
 }
 
 body {
@@ -46,7 +57,7 @@ header h1 {
 
 nav {
     margin-top: 0px;
-    margin-bottom: 15px;
+    /* margin-bottom: 20px; */
 }
 
 nav ul {
@@ -59,8 +70,7 @@ nav li {
     list-style-type: none;
     line-height: 0px;
     text-align: center;
-    margin: 5px;
-    
+    margin: 10px;
 }
 
 nav a {
@@ -68,12 +78,12 @@ nav a {
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
 }
 
 nav a:hover {
     color: var(--pink);
-    background-image: linear-gradient(var(--purple), var(--periwinkle), var(--blue));
+    background-color: var(--periwinkle);
 }
 
 .banner {
@@ -82,45 +92,77 @@ nav a:hover {
     background-image: url("http://via.placeholder.com/850x300.png");
     background-size: cover;
     background-position: center;
-    display: block;
+    /* display: block; */
 }
 
 main {
-    padding: 35px;
+    margin: 0px;
+    display: flex;
+    flex-basis: 100%;
+    /* flex-basis: 350px; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    /* justify-content: start; */
+    /* justify-content: flex-start; */
 }
 
-main section {
-
+#about, #work, #contact {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    align-items: center;
 }
 
-main aside {
+#work {
+    flex-direction: row-reverse;
+}
 
+.subheader {
+    flex-basis: 150px;
+    overflow: hidden;
 }
 
 main h2 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 
-.floatleft {
-    float: left;
+.aboutbox p {
+    text-align: justify;
+    text-justify: inter-character;
 }
 
-.floatright {
-    float: right;
+.aboutbox, .workbox, .contactbox {
+    display: flex;
+    max-height: 150px;
+    overflow-y: scroll;
+    flex-basis: 90%;
+    margin: 0 10px;
 }
 
-.boxes {
-
+.workbox {
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
-.box {
-
+.example, .contactlink {
+   height: 150px;
+   flex-basis: max-content;
+   flex-shrink: 0;
+   flex-grow: 0;
+   align-items: center;
+   /* margin: 0 10px; */
+   text-align: center;
 }
 
-.contactLinks {
-
+.contactlink {
+    height: 50px;
+    line-height: 50px;
 }
 
 footer {
@@ -132,8 +174,3 @@ footer h3 {
     font-weight: 400;
     font-style: normal;
 }
-
-
-::selection {
-    color: var(--pink);
-    background: var(--periwinkle);
