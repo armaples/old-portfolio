@@ -97,11 +97,12 @@ nav a:hover {
 
 main {
     margin: 15px;
-    display: flex;
+    display: block;
     flex-basis: 100%;
     flex-direction: column;
     align-content: center;
     align-items: center; 
+    justify-content: center;
 }
 
 #about, #work, #contact {
@@ -109,16 +110,16 @@ main {
     padding: 10px;
     display: flex;
     gap: 15px;
-    flex-direction: row;
+    flex-direction: row wrap;
     flex-basis: 100%;
-    flex-shrink: 1;
+    flex-shrink: 0;
     align-items: center;
     align-content: center;
+    justify-content: center;
 }
 
 #work {
     flex-direction: row-reverse;
-
 }
 
 #contact {
@@ -134,27 +135,35 @@ h2 {
 p {
     text-align: justify;
     text-justify: inter-character;
+    max-height: 150px;
 }
 
 .aboutbox, .workbox, .contactbox {
     display: flex;
-    max-height: 200px;
+    /* max-height: 100%; */
     overflow-y: scroll;
     flex-basis: 100%;
     gap: 10px;
-    /* text-align: center; */
-    
 }
 
-.workbox {
+.workbox, .contactbox {
     overflow-x: scroll;
-    /* overflow-y: hidden; */
+}
+
+.example {
+    position: relative;
+}
+
+.example p {
+    position: absolute;
+    top: -60px;
+    left: 15px;
+    color: var(--cream)
 }
 
 .subheader {
     flex-basis: 150px;
     overflow: hidden;
-    float: left;
 }
 
 .example, .contactlink {
@@ -162,13 +171,13 @@ p {
    width: 150px;
    flex-shrink: 0;
    flex-grow: 0;
-   /* overflow-x: scroll; */
-   /* text-align: center; */
+   line-height: 150px;
 }
 
 .contactlink {
     background-color: var(--periwinkle);
     text-align: center;
+    line-height: 150px;
 }
 
 .contactlink a {
@@ -202,6 +211,20 @@ footer p {
     #about, #work, #contact {
         flex-flow: column wrap;
     }
+
+    .workbox, .contactbox {
+        flex-wrap: wrap;
+        flex-basis: 30%;
+        justify-content: center;
+    }
+
+    /* .example, .contactlink {
+        flex-shrink: 1;
+    }
+
+    .example img {
+        flex-shrink: 1;
+    } */
 
     .subheader {
         flex-basis: auto;
