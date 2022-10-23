@@ -32,7 +32,7 @@ html {
 
 body {
     background-color: var(--cream);
-    max-width: 650px;
+    max-width: 65%;
     margin: auto;
 }
 
@@ -48,7 +48,7 @@ header {
 header h1 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 7vw;
     font-style: italic;
     background: -webkit-linear-gradient(var(--purple), var(--periwinkle), var(--blue));
     -webkit-background-clip: text;
@@ -79,6 +79,7 @@ nav a, #contact a {
     font-style: normal;
     text-decoration: none;
     padding: 10px;
+    font-size: 18px;
 }
 
 nav a:hover, #contact a:hover {
@@ -88,8 +89,6 @@ nav a:hover, #contact a:hover {
 
 .banner {
     max-width: 100%;
-    /* background-size: cover; */
-    /* background-position: center; */
     margin: 10px 0;
     display:block;
 }
@@ -165,19 +164,23 @@ p {
    width: 30.333%;
    overflow: hidden;
    position: relative;
+   font-size: 13px;
+   word-wrap:break-word;
+}
+
+.example img {
+    border: 1px solid var(--periwinkle);
+    opacity: .75;
+    position: relative;
 }
 
 .example p {
     position: absolute;
     top: -60px;
     left: 15px;
+    word-wrap: normal;
     color: var(--periwinkle);
     text-shadow: -1px 0 var(--cream), 0 1px var(--cream), 1px 0 var(--cream), 0 -1px var(--cream);
-}
-
-.example img {
-    border: 1px solid var(--periwinkle);
-    opacity: .75;
 }
 
 .example:nth-of-type(1) {
@@ -209,7 +212,7 @@ footer p {
     font-size: 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     #about, #work, #contact {
         flex-flow: column wrap;
@@ -221,6 +224,10 @@ footer p {
         justify-content: center;
         align-items: center;
         align-content: center;
+    }
+
+    .example p {
+        word-wrap: normal;
     }
 
     .subheader {
