@@ -73,7 +73,7 @@ nav li {
     margin: 10px;
 }
 
-nav a {
+a {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -92,77 +92,95 @@ nav a:hover {
     background-image: url("http://via.placeholder.com/850x300.png");
     background-size: cover;
     background-position: center;
-    /* display: block; */
+    margin: 10px 0;
 }
 
 main {
-    margin: 0px;
+    margin: 15px;
     display: flex;
     flex-basis: 100%;
-    /* flex-basis: 350px; */
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* width: 100%; */
-    /* justify-content: start; */
-    /* justify-content: flex-start; */
+    align-content: center;
+    align-items: center; 
 }
 
 #about, #work, #contact {
     margin: 10px;
     padding: 10px;
     display: flex;
+    gap: 15px;
     flex-direction: row;
     flex-basis: 100%;
+    flex-shrink: 1;
     align-items: center;
+    align-content: center;
 }
 
 #work {
     flex-direction: row-reverse;
+
 }
 
-.subheader {
-    flex-basis: 150px;
-    overflow: hidden;
+#contact {
+
 }
 
-main h2 {
+h2 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
-    
 }
 
-.aboutbox p {
+p {
     text-align: justify;
     text-justify: inter-character;
 }
 
 .aboutbox, .workbox, .contactbox {
     display: flex;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: scroll;
-    flex-basis: 90%;
-    margin: 0 10px;
+    flex-basis: 100%;
+    gap: 10px;
+    /* text-align: center; */
+    
 }
 
 .workbox {
     overflow-x: scroll;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+}
+
+.subheader {
+    flex-basis: 150px;
+    overflow: hidden;
+    float: left;
 }
 
 .example, .contactlink {
    height: 150px;
-   flex-basis: max-content;
+   width: 150px;
    flex-shrink: 0;
    flex-grow: 0;
-   align-items: center;
-   /* margin: 0 10px; */
-   text-align: center;
+   /* overflow-x: scroll; */
+   /* text-align: center; */
 }
 
 .contactlink {
-    height: 50px;
-    line-height: 50px;
+    background-color: var(--periwinkle);
+    text-align: center;
+}
+
+.contactlink a {
+    color: var(--pink);
+}
+
+.contactlink a:hover {
+    color: var(--cream);
+}
+
+.contactlink a:visited {
+    color: var(--blue);
 }
 
 footer {
@@ -173,4 +191,19 @@ footer h3 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+    #about, #work, #contact {
+        flex-flow: column wrap;
+    }
+
+    .subheader {
+        flex-basis: auto;
+    }
 }
