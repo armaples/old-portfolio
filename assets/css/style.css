@@ -32,7 +32,7 @@ html {
 
 body {
     background-color: var(--cream);
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -48,11 +48,13 @@ header {
 header h1 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 700;
-    font-size: 7vw;
+    font-size: 65px;
     font-style: italic;
     background: -webkit-linear-gradient(var(--purple), var(--periwinkle), var(--blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 70px;
+    padding: 10px;
 }
 
 nav {
@@ -79,7 +81,7 @@ nav a, #contact a {
     font-style: normal;
     text-decoration: none;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 nav a:hover, #contact a:hover {
@@ -128,7 +130,7 @@ h2 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 p {
