@@ -34,7 +34,7 @@ body {
     background-color: var(--cream);
     max-width: 800px;
     margin: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body img {
@@ -124,10 +124,6 @@ main {
     flex-direction: row-reverse;
 }
 
-#contact {
-
-}
-
 h2 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
@@ -151,7 +147,6 @@ p {
     overflow-x: scroll;
     justify-content: center;
 }
-
 
 .subheader {
     flex-basis: 150px;
@@ -216,7 +211,7 @@ footer p {
     font-size: 10px;
 }
 
-@media screen and (max-width: 00px) {
+@media screen and (max-width: 896px) {
 
     #about, #work, #contact {
         flex-flow: column wrap;
