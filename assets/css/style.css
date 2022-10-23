@@ -48,7 +48,7 @@ header {
 header h1 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
     font-style: italic;
     background: -webkit-linear-gradient(var(--purple), var(--periwinkle), var(--blue));
     -webkit-background-clip: text;
@@ -73,7 +73,7 @@ nav li {
     margin: 10px;
 }
 
-a {
+nav a, #contact a {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -81,18 +81,17 @@ a {
     padding: 10px;
 }
 
-nav a:hover {
+nav a:hover, #contact a:hover {
     color: var(--pink);
     background-color: var(--periwinkle);
 }
 
 .banner {
     max-width: 100%;
-    height: 300px;
-    background-image: url("http://via.placeholder.com/850x300.png");
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    /* background-position: center; */
     margin: 10px 0;
+    display:block;
 }
 
 main {
@@ -130,6 +129,7 @@ h2 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 30px;
 }
 
 p {
@@ -144,66 +144,69 @@ p {
     overflow-y: scroll;
     flex-basis: 100%;
     gap: 10px;
-}
-
-.workbox, .contactbox {
+    flex-wrap: wrap;
     overflow-x: scroll;
+    justify-content: center;
 }
 
-.example {
-    position: relative;
-}
-
-.example p {
-    position: absolute;
-    top: -60px;
-    left: 15px;
-    color: var(--cream)
-}
 
 .subheader {
     flex-basis: 150px;
     overflow: hidden;
 }
 
-.example, .contactlink {
-   height: 150px;
-   width: 150px;
+.example {
    flex-shrink: 0;
    flex-grow: 0;
    line-height: 150px;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+   width: 30.333%;
+   overflow: hidden;
+   position: relative;
 }
 
-.contactlink {
+.example p {
+    position: absolute;
+    top: -60px;
+    left: 15px;
+    color: var(--periwinkle);
+    text-shadow: -1px 0 var(--cream), 0 1px var(--cream), 1px 0 var(--cream), 0 -1px var(--cream);
+}
+
+.example img {
+    border: 1px solid var(--periwinkle);
+    opacity: .75;
+}
+
+.example:nth-of-type(1) {
+    flex-basis: 100%;
+}
+
+.example:nth-of-type(1) img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.contact {
     background-color: var(--periwinkle);
     text-align: center;
     line-height: 150px;
-}
-
-.contactlink a {
-    color: var(--pink);
-}
-
-.contactlink a:hover {
-    color: var(--cream);
-}
-
-.contactlink a:visited {
-    color: var(--blue);
-}
-
-footer {
-
+    display: inline;
 }
 
 footer h3 {
     font-family: ohno-blazeface, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 15px;
 }
 
 footer p {
     text-align: center;
+    font-size: 10px;
 }
 
 @media screen and (max-width: 500px) {
@@ -216,15 +219,9 @@ footer p {
         flex-wrap: wrap;
         flex-basis: 30%;
         justify-content: center;
+        align-items: center;
+        align-content: center;
     }
-
-    /* .example, .contactlink {
-        flex-shrink: 1;
-    }
-
-    .example img {
-        flex-shrink: 1;
-    } */
 
     .subheader {
         flex-basis: auto;
