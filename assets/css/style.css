@@ -14,14 +14,8 @@
     color: var(--periwinkle);
 }
 
-::selection {
-    color: var(--pink);
-    background: var(--periwinkle);
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; 
+h1, h2, h3, a {
+    font-family: ohno-blazeface, sans-serif;
 }
 
 html {
@@ -34,20 +28,17 @@ body {
     background-color: var(--cream);
     max-width: 800px;
     margin: auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
-body img {
-    max-width: 100%;
-}
-
+/* The item below affect the title and navigation. */
 header {
     margin-top: 0px;
     margin-bottom: 15px;
 }
 
+/* The item below affect the title only.  */
 header h1 {
-    font-family: ohno-blazeface, sans-serif;
     font-weight: 700;
     font-size: 65px;
     font-style: italic;
@@ -58,9 +49,9 @@ header h1 {
     padding: 10px;
 }
 
+The items below affect the navigation only.
 nav {
     margin-top: 0px;
-    /* margin-bottom: 20px; */
     padding: 10px;
 }
 
@@ -77,10 +68,8 @@ nav li {
     margin: 10px;
 }
 
+/* The items below affect the links in the navigation and in the contact section. */
 nav a, #contact a {
-    font-family: ohno-blazeface, sans-serif;
-    font-weight: 400;
-    font-style: normal;
     text-decoration: none;
     padding: 10px;
     font-size: 20px;
@@ -91,20 +80,39 @@ nav a:hover, #contact a:hover {
     background-color: var(--periwinkle);
 }
 
+nav a:visited, #contact a:visited {
+    color: var(--pink);
+}
+
+/* The item below is for the banner located under the header. */
 .banner {
     max-width: 100%;
     margin: 10px 0;
     display:block;
 }
 
+/* The items below affect the main content of the page. */
 main {
     margin: 15px;
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
     flex-basis: 100%;
-    flex-direction: column;
     align-content: center;
     align-items: center; 
     justify-content: center;
+}
+
+main h2 {
+    font-family: ohno-blazeface, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+main p {
+    text-align: justify;
+    text-justify: inter-character;
+    max-height: 150px;
 }
 
 #about, #work, #contact {
@@ -112,7 +120,7 @@ main {
     padding: 10px;
     display: flex;
     gap: 15px;
-    flex-direction: row wrap;
+    flex-flow: row no-wrap;
     flex-basis: 100%;
     flex-shrink: 0;
     align-items: center;
@@ -120,39 +128,27 @@ main {
     justify-content: center;
 }
 
+/* This allows the work section to be in a different direction from the about and contact section. */
 #work {
     flex-direction: row-reverse;
 }
 
-h2 {
-    font-family: ohno-blazeface, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-}
-
-p {
-    text-align: justify;
-    text-justify: inter-character;
-    max-height: 150px;
-}
-
-.aboutbox, .workbox, .contactbox {
+.aboutbox, .workbox {
     display: flex;
-    /* max-height: 100%; */
-    overflow-y: scroll;
+    overflow: scroll;
     flex-basis: 100%;
     gap: 10px;
     flex-wrap: wrap;
-    overflow-x: scroll;
     justify-content: center;
 }
 
+/* This gives each subheader in the main section a different width from the other flex items. */
 .subheader {
     flex-basis: 150px;
     overflow: hidden;
 }
 
+/* The below items are for the image gallery in the work section. */
 .example {
    flex-shrink: 0;
    flex-grow: 0;
@@ -160,17 +156,11 @@ p {
    align-items: center;
    justify-content: center;
    align-content: center;
-   width: 30.333%;
+   width: 23%;
    overflow: hidden;
    position: relative;
    font-size: 13px;
    word-wrap:break-word;
-}
-
-.example img {
-    border: 1px solid var(--periwinkle);
-    opacity: .75;
-    position: relative;
 }
 
 .example p {
@@ -182,6 +172,12 @@ p {
     text-shadow: -1px 0 var(--cream), 0 1px var(--cream), 1px 0 var(--cream), 0 -1px var(--cream);
 }
 
+.example img {
+    border: 1px solid var(--periwinkle);
+    opacity: .75;
+}
+
+/* This makes the first image in the image gallery larger than the other items. */
 .example:nth-of-type(1) {
     flex-basis: 100%;
 }
@@ -192,17 +188,13 @@ p {
     object-fit: cover;
 }
 
-.contact {
-    background-color: var(--periwinkle);
-    text-align: center;
-    line-height: 150px;
-    display: inline;
+/* The below items affect the copyright information in the footer. */
+footer {
+    padding: 10px;
 }
 
 footer h3 {
-    font-family: ohno-blazeface, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    /* font-family: ohno-blazeface, sans-serif; */
     font-size: 15px;
 }
 
@@ -211,6 +203,19 @@ footer p {
     font-size: 10px;
 }
 
+/* This item affects the font color and background color of selected text on the page. */
+::selection {
+    color: var(--pink);
+    background: var(--periwinkle);
+}
+
+/* This item hides the scrollbar. */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+
+/* This media query helps the page adjust when the width reaches 414px or below.  */
 @media screen and (max-width: 414px) {
 
     #about, #work, #contact {
