@@ -211,7 +211,7 @@ footer p {
     font-size: 10px;
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 414px) {
 
     #about, #work, #contact {
         flex-flow: column wrap;
