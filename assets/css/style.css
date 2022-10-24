@@ -31,13 +31,13 @@ body {
     overflow-x: hidden;
 }
 
-/* The item below affect the title and navigation. */
+/* The item below affects the title and navigation. */
 header {
     margin-top: 0px;
     margin-bottom: 15px;
 }
 
-/* The item below affect the title only.  */
+/* The item below affects the title only.  */
 header h1 {
     font-weight: 700;
     font-size: 65px;
@@ -84,7 +84,7 @@ nav a:visited, #contact a:visited {
     color: var(--pink);
 }
 
-/* The item below is for the banner located under the header. */
+/* The item below affects the banner located under the header. */
 .banner {
     max-width: 100%;
     margin: 10px 0;

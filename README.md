@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this project was to build a portfolio that would be responsive based on the size of the user's viewport. 
+This project was built to provide a foundation for the developer's portfolio that can be easily added onto as the developer builds new applications. The goal of this project was to make the webpage of the portfolio responsive based on the size of the user's viewport. This webpage will adjust its' size and content based on the width of the page, allowing for accessibility across devices. There is a built in image gallery in the work section that can be continuously added onto and will begin to scroll should the content exceed the size of the section. Finally, when the user clicks on the image in the gallery, they will be redirected to that applications deployed website.
 
 ## Table of Contents
 
@@ -70,6 +70,7 @@ Clicking on the images in the work section will bring the user to the deployed a
 - [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) 
 - [Writing a README](https://www.learnhowtoprogram.com/introduction-to-programming/git-html-and-css/writing-a-readme)
 - [Choose A License](https://choosealicense.com/licenses/mit/)
+- [Adobe Fonts](https://fonts.adobe.com/)
 
 ## License
 
