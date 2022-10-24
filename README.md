@@ -71,6 +71,7 @@ Clicking on the images in the work section will bring the user to the deployed a
 - [Writing a README](https://www.learnhowtoprogram.com/introduction-to-programming/git-html-and-css/writing-a-readme)
 - [Choose A License](https://choosealicense.com/licenses/mit/)
 - [Adobe Fonts](https://fonts.adobe.com/)
+- [A Modern CSS Reset](https://piccalil.li/blog/a-modern-css-reset/)
 
 ## License
 
