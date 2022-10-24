@@ -174,7 +174,10 @@ main p {
 
 .example img {
     border: 1px solid var(--periwinkle);
-    opacity: .75;
+}
+
+.example img:hover {
+    opacity: .5;
 }
 
 /* This makes the first image in the image gallery larger than the other items. */
