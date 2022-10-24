@@ -7,7 +7,7 @@
 }
 
 * {
-    font-family: basic-sans, sans-serif;
+    font-family: basic-sans, Verdana, sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -15,7 +15,7 @@
 }
 
 h1, h2, h3, a {
-    font-family: ohno-blazeface, sans-serif;
+    font-family: ohno-blazeface, Garamond, serif;
 }
 
 html {
